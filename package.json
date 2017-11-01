@@ -1,0 +1,38 @@
+{
+  "name": "trees-graph",
+  "version": "1.0.0",
+  "description": "GraphQL server for Slalom Trees",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dborstelmann/trees-graph.git"
+  },
+  "keywords": [
+    "GraphQL",
+    "Postgres",
+    "Node",
+    "Heroku",
+    "Connect"
+  ],
+  "author": "dborstelmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dborstelmann/trees-graph/issues"
+  },
+  "homepage": "https://github.com/dborstelmann/trees-graph#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.13.3",
+    "express-graphql": "^0.4.4",
+    "graphql": "^0.4.12"
+  },
+  "standard": {
+    "ignore": [
+      "Procfile"
+    ]
+  }
+}
