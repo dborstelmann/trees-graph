@@ -1,7 +1,10 @@
 var express = require('express')
 var postgraphql = require('postgraphql').default
+var cors = require('cors')
 
 var app = express()
+
+app.use(cors())
 
 app.use(
     postgraphql(
