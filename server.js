@@ -1,22 +1,23 @@
 var express = require('express')
-var Schema = require('./schema')
-var graphQLHTTP = require('express-graphql')
-var cors = require('cors')
+var postgraphql = require('postgraphql').default
 
 var app = express()
 
-app.use(cors())
+app.use(
+    postgraphql(
+        {
+            user: process.env.POSTGRES_USERNAME,
+            password: process.env.POSTGRES_PASSWORD,
+            host: process.env.POSTGRES_HOST,
+            port: process.env.POSTGRES_PORT,
+            database: process.env.POSTGRES_DATABASE,
+            ssl: true
+        },
+        'public',
+        {
+            graphiql: true
+        }
+    )
+)
 
-app.use('/', graphQLHTTP({
-    schema: Schema,
-    pretty: true,
-    graphiql: true
-}))
-
-app.listen(process.env.PORT || 8080, (err) => {
-    if (err) {
-        console.error(err)
-        return
-    }
-    console.log(`GraphQL Server is now running on localhost:${process.env.PORT || 8080}`)
-})
+app.listen(3000)

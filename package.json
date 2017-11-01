@@ -25,10 +25,8 @@
   },
   "homepage": "https://github.com/dborstelmann/trees-graph#readme",
   "dependencies": {
-    "cors": "^2.8.4",
     "express": "^4.13.3",
-    "express-graphql": "^0.4.4",
-    "graphql": "^0.4.12"
+    "postgraphql": "^3.5.1"
   },
   "standard": {
     "ignore": [
