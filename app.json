@@ -1,15 +1,8 @@
 {
   "name": "trees-graph",
-  "scripts": {
-  },
   "env": {
-  },
-  "formation": {
-  },
-  "addons": [
-    "heroku-postgresql"
-  ],
-  "buildpacks": [
-
-  ]
+    "DATABASE_URL": {
+      "required": true
+    }
+  }
 }
