@@ -1,7 +1,7 @@
 {
   "name": "trees-graph",
   "scripts": {
-    "postdeploy": "bundle exec heroku pg:psql --app trees-graph < migrations.sql"
+    "postdeploy": "pg:psql --app trees-graph < migrations.sql"
   },
   "env": {
   },
