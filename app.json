@@ -1,9 +1,9 @@
 {
   "name": "trees-graph",
-  "scripts": {
-    "postdeploy": "psql $DATABASE_URL < migrations.sql"
-  },
   "env": {
+    "DATABASE_URL": {
+      "required": true
+    },
   },
   "formation": {
   },
