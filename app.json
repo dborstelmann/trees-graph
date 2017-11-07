@@ -6,8 +6,5 @@
     }
   },
   "formation": {
-  },
-  "addons": [
-    "heroku-postgresql"
-  ]
+  }
 }
