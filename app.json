@@ -1,7 +1,7 @@
 {
   "name": "trees-graph",
   "scripts": {
-    "postdeploy": "pg:psql --app trees-graph < migrations.sql"
+    "postdeploy": "psql $DATABASE_URL < migrations.sql"
   },
   "env": {
   },
